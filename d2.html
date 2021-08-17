@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>The Phone Zone</title>
+<title>The Phone Shop</title>
 </head>
 <body>
 
@@ -41,10 +41,26 @@
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
+        button {
+            background-color: darkslateblue;
+            color: white;
+            padding: 10px;
+            margin-left: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: lightseagreen;
+        }
+        #red {
+            color: red;
+        }
     </style>
 
 
-<h1><strong>The Phone Zone</strong></h1>
+<h1 id="h1"><strong>The Phone Zone</strong></h1>
+<button onclick="changeTitle()">CHANGE TITLE</button>
+<button onclick="changeBackgroundColor()">CHANGE THEME</button>
+<button onclick="changeFooter()">CHANGE FOOTER</button>
 <h3>Top 5 Best Smartphones to buy in 2021:</h3>
 
 <table>
@@ -96,6 +112,32 @@
     </tr>
   </table>
 
-<footer>The Phone Zone, 26 Phone Street, Phoneville, 123456</footer>
+
+
+
+
+<footer id="footer">The Phone Zone, 26 Phone Street, Phoneville, 123456</footer>
+
+<script>
+
+let changeTitle = function() {
+    document.getElementById("h1").innerHTML = "Phone Zone";
+}
+
+let changeBackgroundColor = function() {
+    document.body.style.backgroundColor = "lightCyan";
+}
+
+let changeFooter = function() {
+    document.getElementById("footer").innerHTML="42 Wallabe Way, Sydney";
+}
+
+
+
+
+
+</script>
+
+
 </body>
 </html>
